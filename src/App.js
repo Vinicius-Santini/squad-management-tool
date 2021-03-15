@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/header/header.jsx'
 import MyTeams from './components/my-teams/myTeams.jsx'
+import TopFive from './components/top-five/topFive';
 
 function App() {
   return (
@@ -9,6 +10,10 @@ function App() {
         <Header />
         <main>
           <MyTeams />
+          <div>
+            <TopFive />
+          </div>
+
         </main>
 
       </div>

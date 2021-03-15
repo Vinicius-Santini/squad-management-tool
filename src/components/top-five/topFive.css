@@ -1,0 +1,81 @@
+.top-five-section{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 50vh;
+    width: 45vw;
+    border-radius: 15px;
+    margin-top: 4vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.top-five-heading{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    color: #563682;
+    font-size: 3vh;
+    border-bottom: 1px solid lightgray;
+}
+
+.top-five-heading h6{
+    margin-left: 1.5vw;
+}
+
+.top-five-tables-heading{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2vh;
+    margin-top: 4vh;
+    font-weight: 600;
+    font-size: 1.5vh;
+    padding-left: 2vw;
+}
+
+.top-five-high-avg-title{
+    flex-grow: 1;
+}
+
+.top-five-low-avg-title{
+    flex-grow: 1;
+}
+
+.top-five-tables{
+    display: flex;
+    flex-direction: row;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 31vh;
+}
+
+.top-five-highest-table{
+    background-color: #DFE6E4;
+    flex-grow: 1;
+    margin-right: 2vw ;
+    border-radius: 10px;
+}
+
+.top-five-lowest-table{
+    background-color: #DFE6E4;
+    flex-grow: 1;
+    border-radius: 10px;
+}
+
+.top-five-table-item{
+    background-color: white;
+    margin: 0.7vh;
+    border-radius: 10px;
+    display: flex;
+    height: 5.3vh;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1vw ;
+    padding-right: 1vw;
+    font-size: 1.5vh;
+}
+
+.top-five-table-item-avg{
+    font-weight: 600;
+}
+
