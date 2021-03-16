@@ -7,3 +7,8 @@
   flex-direction: row;
   height: 100vh
 }
+
+.tops-and-pick{
+  display: flex;
+  flex-direction: column;
+}
