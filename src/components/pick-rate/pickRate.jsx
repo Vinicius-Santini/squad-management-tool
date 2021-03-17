@@ -11,7 +11,7 @@ const PickRate = () =>{
                         Most picked player
                     </div>
                     <div className="most-picked-side-data">
-                        <img className="most-picked-side-photo" alt="Foto do jogador mais escolhido"/>
+                        <img className="most-picked-side-photo" alt=""/>
                         <div className="most-picked-side-percentage">75%</div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@ const PickRate = () =>{
                         Less picked player
                     </div>
                     <div classname="less-picked-side-data">
-                        <img className="less-picked-side-photo" alt="Foto do jogador menos escolhido"/>
+                        <img className="less-picked-side-photo" alt=""/>
                         <div className="less-picked-side-percentage">25%</div>
                     </div>
                 </div>

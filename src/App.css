@@ -1,14 +1,14 @@
-.App{
+.App {
   background-color: #f5f5f5;
 }
 
-.App main{
+.App main {
   display: flex;
   flex-direction: row;
-  height: 100vh
+  height: 100%;
 }
 
-.tops-and-pick{
+.tops-and-pick {
   display: flex;
   flex-direction: column;
 }
