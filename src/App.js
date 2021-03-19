@@ -11,14 +11,7 @@ function App() {
     <>
       <div className="App">
         <Header />
-        <main>
-          <MyTeams />
-          <div className="tops-and-pick">
-            <TopFive />
-            <PickRate />
-          </div>
-        </main>
-
+        <Team />
       </div>
     </>
   );

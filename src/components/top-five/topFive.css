@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  height: 46.5vh;
-  width: 45vw;
+  height: 50%;
+  width: 100%;
   border-radius: 15px;
   margin-top: 4vh;
-  margin-left: 3vw;
-  margin-right: 3vw;
+  padding-bottom: 3vh;
 }
 
 .top-five-heading {

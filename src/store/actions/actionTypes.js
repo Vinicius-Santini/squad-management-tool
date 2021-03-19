@@ -1,5 +1,6 @@
 export const GET_PLAYERS = "GET_PLAYERS"
-export const GET_PLAYERS_URL = ""
+export const GET_PLAYERS_URL = "https://api.mocki.io/v1/d8fb76bc"
+export const SEARCH_PLAYERS = "SEARCH_PLAYERS"
 export const GET_TEAMS = "GET_TEAMS"
 export const GET_TEAMS_URL = ""
 export const POST_TEAM = "POST_TEAM"

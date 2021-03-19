@@ -4,10 +4,9 @@
   background-color: white;
   height: 100%;
   overflow: auto;
-  width: 93vw;
+  width: 95%;
   border-radius: 15px;
   margin-top: 4vh;
-  margin-left: 3vw;
   margin-bottom: 4vh;
 }
 
@@ -26,12 +25,48 @@
   margin-left: 1.5vw;
 }
 
+.team-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .team-content {
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 
 .team-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.team-desc-title {
+  padding-top: 3vh;
+}
+
+.team-desc-text {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  max-width: 100%;
+  height: 50%;
+}
+
+.team-tags-title {
+  padding-top: 3vh;
+}
+textarea {
+  resize: none;
+}
+
+.team-tags-text {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+
+.team-info-heading {
   display: flex;
   justify-content: center;
 }
@@ -47,19 +82,19 @@
   display: flex;
   flex-direction: row;
   padding-top: 9vh;
+  justify-content: space-between;
 }
 
 .team-name-and-type-fields {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  padding-left: 10vw;
+  width: 45%;
 }
 
 .team-website-field {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  width: 45%;
 }
 
 .team-type-options {
@@ -70,8 +105,7 @@
 }
 
 .team-text-input {
-  width: 30vw;
-  height: 2.75vh;
+  height: 3vh;
   border: 2px solid lightgray;
   border-radius: 5px;
 }
@@ -88,7 +122,7 @@
 }
 
 .squad-config-title {
-  padding-top: 9vh;
+  padding-top: 2vh;
   font-size: 1.75vh;
   color: gray;
   font-weight: 800;
@@ -108,36 +142,32 @@
   font-weight: 600;
 }
 
-.squad-config-content {
-  display: flex;
-  flex-direction: row;
-}
-
 .squad-config-formation-and-field {
-  flex-grow: 1;
+  width: 45%;
   display: flex;
   flex-direction: column;
-  padding-left: 10vw;
 }
 
 .squad-config-search-and-player {
-  flex-grow: 1;
+  width: 45%;
 }
 
 .squad-config-search {
-  display: flex;
   flex-direction: column;
+  margin-bottom: 3vh;
+  width: 100%;
+  display: flex;
 }
 
-.squad-config-info {
+.squad-config-heading {
   display: flex;
   justify-content: center;
 }
 
 .squad-config-formation {
-  flex-grow: 1;
   display: flex;
   align-items: center;
+  width: 90%;
 }
 
 .squad-config-formation-title {
@@ -156,7 +186,7 @@
 }
 
 .squad-config-field {
-  width: 95%;
+  width: 100%;
   height: 90vh;
   background: linear-gradient(
     to bottom,
@@ -167,10 +197,12 @@
   border-radius: 3px;
   margin-top: 1.5vh;
   margin-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .save-changes-button {
-  width: 95%;
+  width: 100%;
   height: 4.75vh;
   color: white;
   border: 2px solid #a72e64;
@@ -184,6 +216,7 @@
   font-weight: 700;
   font-size: 2vh;
   margin-bottom: 10vh;
+  cursor: pointer;
 }
 
 .team-type-input {
@@ -192,4 +225,42 @@
 
 .team-type-input-title {
   margin-right: 3vw;
+}
+
+input {
+  color: rgb(180, 180, 180);
+  font-size: 1.5vh;
+  padding-left: 0.5vw;
+}
+
+textarea {
+  color: rgb(180, 180, 180);
+  font-size: 1.5vh;
+  padding-left: 0.5vw;
+}
+
+.squad-config-result {
+  background: linear-gradient(
+    180deg,
+    rgba(252, 252, 252, 1) 0%,
+    rgba(237, 237, 237, 1) 50%,
+    rgba(225, 225, 225) 100%
+  );
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 9vh;
+  border: 2px dashed lightgrey;
+  margin-bottom: 1vh;
+  font-size: 1.5vh;
+  font-weight: 600;
+}
+
+.squad-config-result-title-and-nacionality {
+}
+
+.create-edit-team {
+  display: flex;
+  justify-content: center;
 }

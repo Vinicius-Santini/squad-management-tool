@@ -2,12 +2,9 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  height: 95vh;
-  width: 45vw;
+  height: 95%;
+  width: 100%;
   border-radius: 15px;
-  margin-top: 4vh;
-  margin-left: 3vw;
-  margin-bottom: 5vh;
 }
 
 .my-teams-heading {
@@ -36,37 +33,12 @@
     rgba(140, 49, 112, 1) 100%
   );
   font-size: 2vh;
-  height: 4vh;
-  width: 2vw;
+  height: 50%;
+  width: 5%;
   border-radius: 10px;
   margin-right: 1.5vw;
   font-weight: 700;
-}
-
-.my-teams-heading button::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  bottom: -10px;
-  left: 5%;
-  height: 110%;
-  width: 90%;
-  opacity: 0.8;
-  border-radius: 50px;
-
-  /* Declaring our shadow color inherit from the parent (button) */
-  background: inherit;
-
-  /* Blurring the element for shadow effect */
-  -webkit-filter: blur(6px);
-  -moz-filter: blur(6px);
-  -o-filter: blur(6px);
-  -ms-filter: blur(6px);
-  filter: blur(6px);
-
-  /* Transition for the magic */
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  cursor: pointer;
 }
 
 .my-teams-table {
@@ -88,16 +60,16 @@
 
 .my-teams-table-heading-title {
   border-right: 1px solid lightgray;
-  flex-grow: 1;
-  padding-left: 1vw;
+  width: 25%;
   height: 3vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 1vw;
 }
 
 .my-teams-table-heading-desc {
-  flex-grow: 4;
+  width: 75%;
   margin-left: 1.5vw;
   display: flex;
   justify-content: space-between;
@@ -113,13 +85,13 @@
 }
 
 .my-teams-table-item-title {
-  flex-grow: 1;
+  width: 25%;
   padding-left: 1vw;
 }
 
 .my-teams-table-item-desc {
-  flex-grow: 4;
-  padding-left: 2vw;
+  width: 75%;
+  padding-left: 1.5vw;
 }
 
 .sort-arrows {

@@ -1,25 +1,29 @@
 .appHeader {
-    background: linear-gradient(90deg, rgba(183,20,69,1) 0%, rgba(154,25,83,1) 50%, rgba(126,31,98,1) 100%);
-    color:white;
-    height: 4vh;
-    font-size: 2vh;
-    display: flex;
-    font-weight: 700;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 3vw;
-    
+  background: linear-gradient(
+    90deg,
+    rgba(183, 20, 69, 1) 0%,
+    rgba(154, 25, 83, 1) 50%,
+    rgba(126, 31, 98, 1) 100%
+  );
+  color: white;
+  height: 4vh;
+  font-size: 2vh;
+  display: flex;
+  font-weight: 700;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 3vw;
 }
 
-.appHeader a{
-        color: white; 
-        text-decoration: none;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+.appHeader a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .appHeader img {
-    height: 5vh;
-    padding-right: 1vw;
+  height: 135%;
+  padding-right: 1vw;
 }

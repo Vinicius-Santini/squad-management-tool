@@ -1,4 +1,4 @@
-import { GET_PLAYERS, GET_PLAYERS_URL } from "./actionTypes";
+import { GET_PLAYERS, GET_PLAYERS_URL, SEARCH_PLAYERS } from "./actionTypes";
 import Service from "../../api/apiService";
 
 export const getPlayers = () => async (dispatch) => {
@@ -12,3 +12,12 @@ export const getPlayers = () => async (dispatch) => {
     }),
   });
 };
+
+export const getMatchedPlayers = (matched) => (dispatch) => {
+  return dispatch({
+    type: SEARCH_PLAYERS,
+    payload: matched,
+  });
+};
+
+export default getPlayers
