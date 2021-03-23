@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+#Squad Management Tool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto foi desenvolvido com:
 
-## Available Scripts
+- React
+- Redux
+- JavaScript
+- CSS
+- HTML
 
-In the project directory, you can run:
 
-### `npm start`
+##How to run
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Primeiro você vai precisar usar o `npm i` para instalar todas as dependências necessárias.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+E então se você quiser rodar o projeto pode usar:
 
-### `npm test`
+`npm start` - para rodar em desenvolvimento.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+or
 
-### `npm run build`
+`npm run build` - para montar a aplicação para produção.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##About the project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para o desenvolvimento deste projeto eu priorizei as features e layout sujeridos no desafio. 
+Consegui deixar o layout relativamente próximo do que foi pedido, para tal utilizei apenas Html e CSS puros, sem bibliotecas de componentes.
+Em relação às features, infelizmente, não consegui implementar todas no período, porém todas as features da tela inicial estão funcionando como pedido, já na página de criação e edição nem todas features estão funcionando idealmente:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- É possível cadastrar  e editar times, porém o usuário ainda poderia cadastrar o mesmo jogador várias vezes no mesmo time.
 
-### `npm run eject`
+- As validações para os campos obrigatórios estão funcionando.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- O campo não está com o layout idealmente implementado e não é possível utilizar  drag n drop.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Os jogadores selecionado pelo usário ao clicar não aparecem no campo ainda, mas são registrados no estado da aplicação.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Ao mudar a formação os jogadores selecionados são deselecionados, como pede o desafio.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- No momento de editar infelizmente os dados atuais do time em questão não vão aparecer, mas é possível editá-lo preenchendo os campos ainda assim.
 
-## Learn More
+Apesar de incompleto julgo que no projeto é possível observar meus conhecimentos nas linguagens utilizadas, tenho certeza que com um pouco mais de tempo disponível teria finalizado completamente o projeto.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+###Outras informções
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+O projeto está utilizando mocks para seus gets de Times e Jogadores. Para estes gets e qualquer outras chamadas http que quisesse fazer no futuro criei uma apiService, uma service genérica para realizar as chamadas.
 
-### Code Splitting
+Se houvesse um pouco mais de tempo priorizaria terminar as features e layout em 100%, componentizar um pouco mais o projeto e criar testes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###end
