@@ -1,19 +1,24 @@
 import {
   GET_TEAMS,
   GET_TEAMS_URL,
-  POST_TEAM,
-  POST_TEAM_URL,
-  UPDATE_TEAM,
-  UPDATE_TEAM_URL,
+  CHANGE_FORMATION,
+  CHANGE_TEAM_WEBSITE,
+  CHANGE_TEAM_NAME,
+  CHANGE_TEAM_DESCRIPTION,
+  CHANGE_TEAM_TYPE,
+  CHANGE_TEAM_TAGS,
+  CHANGE_TEAMS_ORDER,
+  CREATE_NEW_TEAM,
   DELETE_TEAM,
-  DELETE_TEAM_URL
+  UPDATE_TEAM,
+  ADD_PLAYER_TO_TEAM,
+  CLEAR_CURRENT_PLAYERS
 } from "./actionTypes";
 import Service from "../../api/apiService";
 
-export const getTeams = () => async (
-  dispatch
-) => {
+export const getTeams = () => async (dispatch) => {
   const url = GET_TEAMS_URL;
+  
   return dispatch({
     type: GET_TEAMS,
     payload: await Service({
@@ -23,43 +28,128 @@ export const getTeams = () => async (
   });
 };
 
-export const postTeam = () => async (
-  dispatch
-) => {
-  const url = POST_TEAM_URL;
+export const sortTeams = (type, currentStatus, sortedTeams) => (dispatch) => {
+  if(type === "Name" && currentStatus)
+  {
+    return dispatch({
+      type: CHANGE_TEAMS_ORDER,
+      payload: {
+       sortByName: false,
+       sortByDesc: false,
+       sortedTeams
+      },
+    });
+  }
+  else if(type === "Name" && !currentStatus)
+  {
+    return dispatch({
+      type: CHANGE_TEAMS_ORDER,
+      payload: {
+       sortByName: true,
+       sortByDesc: false,
+       sortedTeams
+      }    
+    });
+  }
+  else if(type === "Desc" && currentStatus)
+  {
+    return dispatch({
+      type: CHANGE_TEAMS_ORDER,
+      payload: {
+       sortByName: false,
+       sortByDesc: false,
+       sortedTeams
+      }
+    });
+  }
+  else if(type === "Desc" && !currentStatus)
+  {
+    return dispatch({
+      type: CHANGE_TEAMS_ORDER,
+      payload: {
+       sortByName: false,
+       sortByDesc: true,
+       sortedTeams
+      }
+    });
+  }
+}
+
+export const changeFormation = (formation) => (dispatch) => {
   return dispatch({
-    type: POST_TEAM,
-    payload: await Service({
-      method: "post",
-      url,
-    }),
+      type: CHANGE_FORMATION,
+      payload: formation,
   });
 };
 
-export const putTeam = () => async (
-  dispatch
-) => {
-  const url = UPDATE_TEAM_URL;
+export const changeName = (name) => (dispatch) => {
+  return dispatch({
+      type: CHANGE_TEAM_NAME,
+      payload: name,
+  });
+};
+
+export const changeWebSite = (website) => (dispatch) => {
+  return dispatch({
+      type: CHANGE_TEAM_WEBSITE,
+      payload: website,
+  });
+};
+
+export const changeDescription = (description) => (dispatch) => {
+  return dispatch({
+      type: CHANGE_TEAM_DESCRIPTION,
+      payload: description,
+  });
+};
+
+export const changeTeamType = (teamType) => (dispatch) => {
+  return dispatch({
+      type: CHANGE_TEAM_TYPE,
+      payload: teamType,
+  });
+};
+
+export const changeTags = (tags) => (dispatch) => {
+  return dispatch({
+      type: CHANGE_TEAM_TAGS,
+      payload: tags,
+  });
+};
+
+export const createTeam = (team) => (dispatch) => {
+  return dispatch({
+    type: CREATE_NEW_TEAM,
+    payload: team
+  });
+}
+
+export const updateTeam = (team) => (dispatch) => {
   return dispatch({
     type: UPDATE_TEAM,
-    payload: await Service({
-      method: "put",
-      url,
-    }),
+    payload: team
   });
-};
+}
 
-export const deleteTeam = () => async (
-  dispatch
-) => {
-  const url = DELETE_TEAM_URL;
+export const deleteTeam = (id) => (dispatch) => {
   return dispatch({
     type: DELETE_TEAM,
-    payload: await Service({
-      method: "delete",
-      url,
-    }),
+    payload: id
   });
-};
+}
+
+export const addPlayerToTeam = (player) => (dispatch) => {
+  return dispatch({
+    type: ADD_PLAYER_TO_TEAM,
+    payload: player
+  });
+}
+
+export const clearCurrentPlayers = () => (dispatch) => {
+  return dispatch({
+    type: CLEAR_CURRENT_PLAYERS,
+    payload: []
+  });
+}
 
 

@@ -3,14 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Provider } from "react-redux";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import storeConfig from "./store/storeConfig"
 import reportWebVitals from './reportWebVitals';
+import Team from './components/team/team';
 
 const store = storeConfig();
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
+ReactDOM.render(  
+<Provider store={store}>
+  <BrowserRouter>
+  <Switch>
+        <Route path="/" exact={true} component={App} />
+        <Route path="/create" exact={true} component={Team} />
+        <Route path="/team/:id" exact={true} component={Team} />
+  </Switch>
+  </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );

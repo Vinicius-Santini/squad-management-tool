@@ -4,12 +4,12 @@ import {
   applyMiddleware,
   compose,
 } from "../../node_modules/redux";
-import teamReducer from "./reducers/teamReducer";
+import teamsReducer from "./reducers/teamsReducer";
 import playersReducer from "./reducers/playersReducer";
 import thunk from "redux-thunk";
 
 const reducers = combineReducers({
-  teams: teamReducer,
+  teams: teamsReducer,
   players: playersReducer,
 });
 

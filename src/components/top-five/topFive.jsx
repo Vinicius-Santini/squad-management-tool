@@ -1,7 +1,15 @@
 import React from 'react'
 import "./topFive.css"
 
-const TopFive = () => {
+const TopFive = ({ teams }) => {
+
+    const orderedByAgeDesc = teams.sort((a, b) => ((a.players_avg_age > b.players_avg_age) ? 1 
+    : ((b.players_avg_age > a.players_avg_age) ? -1 : 0)));
+    const orderedByAgeAsc = teams.sort((a, b) => ((a.players_avg_age < b.players_avg_age) ? 1 
+    : ((b.players_avg_age < a.players_avg_age) ? -1 : 0)));
+    const topFiveHighest = orderedByAgeDesc.slice(0, 4);
+    const topFiveLowest = orderedByAgeAsc.slice(0, 4);
+
     return (
         <div className="top-five-section">
             <div className="top-five-heading">
@@ -13,20 +21,24 @@ const TopFive = () => {
                 </div>
                 <div className="top-five-tables">
                     <div className="top-five-highest-table">
-                        <div className="top-five-table-item">
-                            <div className="top-five-table-item-team">Inter Milan</div>
-                            <div className="top-five-table-item-avg">31.9</div>
-                        </div>
+                        { topFiveHighest.map(item => 
+                            <div className="top-five-table-item">
+                                <div className="top-five-table-item-team">{item.team_name}</div>
+                                <div className="top-five-table-item-avg">{item.team_avg_age}</div>
+                            </div>
+                        )} 
                     </div>
                     <div className="top-five-lowest-table">
-                        <div className="top-five-table-item">
-                            <div className="top-five-table-item-team">Arsenal FC</div>
-                            <div className="top-five-table-item-avg">21.1</div>
-                        </div>
+                        { topFiveLowest.map(item => 
+                            <div className="top-five-table-item">
+                                <div className="top-five-table-item-team">{item.team_name}</div>
+                                <div className="top-five-table-item-avg">{item.team_avg_age}</div>
+                            </div>
+                        )}
                     </div>
                 </div>
         </div>
     )
 }
 
-export default TopFive
+export default TopFive;

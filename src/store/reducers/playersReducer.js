@@ -8,12 +8,10 @@ const initialState = { players: [],
 export default function (state = initialState, action) {
   switch (action.type) {
     case GET_PLAYERS:
-      const enhancedActPayload = action.payload.players.map((player) => {
-          return {...player};
-      });
+        
       return {
         ...state,
-        players: enhancedActPayload,
+        players: action.payload.players,
       };
 
       case SEARCH_PLAYERS:

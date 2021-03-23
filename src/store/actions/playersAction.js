@@ -19,5 +19,3 @@ export const getMatchedPlayers = (matched) => (dispatch) => {
     payload: matched,
   });
 };
-
-export default getPlayers
